@@ -1,0 +1,121 @@
+:root {
+  color: #e7edf2;
+  background: #101418;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+}
+
+.catalog-page {
+  min-height: 100%;
+  background: #101418;
+}
+
+.molecule-list {
+  width: 100%;
+  padding: 18px;
+}
+
+.catalog-empty {
+  display: grid;
+  min-height: calc(100vh - 36px);
+  place-items: center;
+  color: rgba(231, 237, 242, 0.58);
+  font-size: 14px;
+  text-align: center;
+}
+
+.catalog-empty code {
+  color: rgba(231, 237, 242, 0.84);
+}
+
+.molecule-group {
+  margin: 0 0 26px;
+}
+
+.molecule-group:last-child {
+  margin-bottom: 0;
+}
+
+.molecule-group__title {
+  margin: 0 0 10px;
+  color: rgba(231, 237, 242, 0.86);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.molecule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 160px);
+  grid-auto-rows: 189px;
+  align-content: start;
+  justify-content: start;
+  gap: 14px;
+  width: 100%;
+}
+
+.molecule-tile {
+  position: relative;
+  width: 160px;
+  min-width: 160px;
+  height: 189px;
+  min-height: 189px;
+  overflow: hidden;
+  border: 1px solid rgba(231, 237, 242, 0.14);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  text-align: left;
+}
+
+.molecule-tile:hover {
+  border-color: rgba(231, 237, 242, 0.32);
+}
+
+.molecule-tile__preview {
+  display: block;
+  width: 160px;
+  min-width: 160px;
+  height: 160px;
+  min-height: 160px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.molecule-tile__preview--idle {
+  cursor: default;
+}
+
+.molecule-tile__preview--dragging {
+  cursor: grabbing;
+}
+
+.molecule-tile__meta {
+  border-top: 1px solid rgba(231, 237, 242, 0.1);
+  color: rgba(231, 237, 242, 0.72);
+  font-size: 12px;
+  padding: 6px 8px;
+}
